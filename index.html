@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Guia Git e GitHub</title>
+<link rel="stylesheet" href="style.css">
+<body>
+ 
+<header>Git e GitHub</header>
+ 
+<nav>
+<button onclick="showTab('git')" class="active">O que é Git</button>
+<button onclick="showTab('github')">O que é GitHub</button>
+<button onclick="showTab('diferencas')">Diferenças</button>
+<button onclick="showTab('comandos')">Git Bash</button>
+<button onclick="showTab('readme')">README.md</button>
+<button onclick="showTab('repositorio')">Criar Repositório</button>
+<button onclick="showTab('clonar')">Clonar Projeto</button>
+<button onclick="showTab('versao')">Fazer Commit</button>
+<button onclick="showTab('enviar')">Enviar para GitHub</button>
+</nav>
+ 
+<div class="content">
+<div id="git" class="tab active">
+<h2>O que é Git?</h2>
+<p>Git é um sistema de controle de versão criado por Linus Torvalds. Ele permite:</p>
+<ul>
+<li>Rastrear mudanças no código-fonte.</li>
+<li>Trabalhar em equipe sem sobrescrever arquivos.</li>
+<li>Voltar para versões anteriores do projeto.</li>
+</ul>
+</div>
+ 
+  <div id="github" class="tab">
+<h2>O que é GitHub?</h2>
+<p>GitHub é uma plataforma online que armazena repositórios Git. Com ela você pode:</p>
+<ul>
+<li>Compartilhar código com o mundo ou com sua equipe.</li>
+<li>Colaborar com outras pessoas via pull requests.</li>
+<li>Acompanhar bugs, tarefas e histórico de mudanças.</li>
+</ul>
+</div>
+ 
+  <div id="diferencas" class="tab">
+<h2>Diferenças entre Git e GitHub</h2>
+<ul>
+<li><strong>Git:</strong> Ferramenta local para controle de versão.</li>
+<li><strong>GitHub:</strong> Serviço online que hospeda projetos Git.</li>
+<li>Você pode usar Git sem GitHub, mas não o contrário.</li>
+</ul>
+</div>
+ 
+  <div id="comandos" class="tab">
+<h2>Principais comandos Linux para usar no Git Bash</h2>
+<ul>
+<li><code>ls</code> – Lista arquivos da pasta</li>
+<li><code>cd pasta</code> – Entra em uma pasta</li>
+<li><code>mkdir nome</code> – Cria uma nova pasta</li>
+<li><code>touch arquivo.txt</code> – Cria um novo arquivo</li>
+<li><code>clear</code> – Limpa o terminal</li>
+</ul>
+</div>
+ 
+  <div id="readme" class="tab">
+<h2>Comandos Linux presentes no README.md</h2>
+<pre><code>git init             # Inicia o Git no projeto
+
+git add .            # Adiciona todos os arquivos
+
+git commit -m "msg"  # Cria um ponto de salvamento
+
+git push origin main # Envia para o GitHub</code></pre>
+</div>
+ 
+  <div id="repositorio" class="tab">
+<h2>Como criar um repositório no GitHub</h2>
+<ol>
+<li>Acesse <a href="https://github.com" target="_blank">github.com</a> e faça login.</li>
+<li>Clique em <strong>"New repository"</strong>.</li>
+<li>Escolha o nome, a visibilidade (público ou privado).</li>
+<li>Adicione um README se quiser.</li>
+<li>Clique em <strong>"Create repository"</strong>.</li>
+</ol>
+</div>
+ 
+  <div id="clonar" class="tab">
+<h2>Como clonar um projeto existente</h2>
+<p>No terminal Git Bash, digite:</p>
+<pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+<p>Isso vai copiar o repositório para sua máquina local.</p>
+</div>
+ 
+  <div id="versao" class="tab">
+<h2>Como gerar uma versão com Git (commit)</h2>
+<p>Após fazer mudanças nos arquivos:</p>
+<pre><code>git add .</code></pre>
+<pre><code>git commit -m "mensagem explicando a alteração"</code></pre>
+<p>Esses comandos salvam uma "versão" do seu projeto.</p>
+</div>
+ 
+  <div id="enviar" class="tab">
+<h2>Como enviar para o GitHub (push)</h2>
+<p>Depois de fazer commit, envie para o GitHub com:</p>
+<pre><code>git push origin main</code></pre>
+<p>O código local será enviado para o repositório online.</p>
+</div>
+</div>
+ 
+<footer>
+
+  Desenvolvido por Beatriz Cardoso da Silva dos Santos
+</footer>
+ 
+<script>
+
+function showTab(id) {
+
+  const tabs = document.querySelectorAll('.tab');
+
+  const buttons = document.querySelectorAll('nav button');
+ 
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+ 
+  document.getElementById(id).classList.add('active');
+
+  event.target.classList.add('active');
+
+}
+</script>
+ 
+</body>
+</html>
+
+ 
